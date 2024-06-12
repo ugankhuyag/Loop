@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Too</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+</head>
+
+<body>
+<main>
+    <input id="input" placeholder="Enter value ..."/>
+    <button onclick="run();">Solve</button>
+    <pre>
+        <code id="output" style="background-color: aqua; width: 500px;"></code>
+</main>    
+<script>
+        function run () {
+            const n = getNumberValueFromInput ();
+            const output = solution (n);
+            print (output);
+        }
+  
+        function solution (n) {
+            let result = "";    
+
+            for (let i = 1; i <= n; i++) {
+                result = result + getStarNumbers (i);
+                result = result + "\n";
+            }
+                return result;
+        }
+
+        function getStarNumbers (numberOfStars) {     
+            let stars = "";
+            for (let i = 0; i < numberOfStars; i++){
+            stars = stars + "*";      
+            }
+            
+            return stars;
+        }
+ 
+        function getNumberValueFromInput () {
+            const inputString = document.getElementById("input").value;
+            const n = Number (inputString);
+            return n;
+        }
+
+        function print (output) {
+            document.getElementById("output").innerText = output;
+        }
+
+    </script>
+
+</body>
+</html>

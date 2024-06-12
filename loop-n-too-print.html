@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+</head>
+
+<body>
+<main>
+    <button onclick="location.reload">Restart</button>
+    <pre>
+        <code id="output"></code>
+    </pre>
+</main>    
+<script>
+    // 1 - s n hurtelh too hevleh //
+        const n = prompt ("1-s n hurtelh toog hevle - n too oruulna uu");
+        
+        const output = document.getElementById("output");
+
+    
+        const hurtelToo = n;
+        for (let ehlehToo = 0; ehlehToo <= n; ehlehToo ++){  
+            console.log(ehlehToo + 1)
+            output.innerText += ehlehToo + "\n";
+        }
+        output.innerText += "1-s N hurtel too hevleh: " + n;
+
+    </script>
+
+</body>
+</html>

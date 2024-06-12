@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+</head>
+
+<body>
+<main>
+    <button onclick="location.reload">Restart</button>
+    <pre>
+        <code id="output"></code>
+    </pre>
+</main>    
+<script>
+    // 0 - s n hurtelh toonii niilberiig ol //
+        const n = prompt ("0-s n hurtelh toonii niilberiig gargah tul - n too oruulna uu");
+        
+        const output = document.getElementById("output");
+
+    
+        let sum = 0;
+        for (let ehlehToo = 1; ehlehToo <= n; ehlehToo ++){  
+            sum = sum + ehlehToo;
+            sum += ehlehToo;
+            output.innerText += ehlehToo + "\n";
+        }
+        output.innerText += "1-s N toonii niilber: " + sum;
+
+    </script>
+
+</body>
+</html>
